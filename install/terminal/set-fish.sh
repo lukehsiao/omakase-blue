@@ -6,3 +6,5 @@ if [ ! -d "$HOME/.config/fish/functions/fish_command_not_found.fish" ]; then
   cp ~/.local/share/omakase-blue/configs/fish/fish_command_not_found.fish ~/.config/fish/functions/fish_command_not_found.fish
 fi
 
+# Set as default shell
+chsh --shell /usr/bin/fish
