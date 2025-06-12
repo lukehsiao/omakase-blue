@@ -1,0 +1,289 @@
+* {
+    font-family: 'Berkeley Mono Variable', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 13px;
+}
+
+@import "mocha.css";
+
+@define-color inactive_module_color #a9a9a9;
+
+window#waybar {
+    background-color: shade(@base, 0.9);
+    border-color: alpha(@crust, 0.3);
+    border-style: solid;
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar:not(.bottom):not(.left):not(.right) {
+    border-bottom-width: 2px;
+}
+
+window#waybar.bottom {
+    border-top-width: 2px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    /* reset all builtin/theme styles */
+    all: unset;
+    /* Restore some properties */
+    min-height: 24px;
+    min-width: 16px;
+    padding: 0 10px;
+    transition: all 200ms ease-out;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+window#waybar:not(.bottom):not(.left):not(.right) button:hover{
+    box-shadow: inset 0 -2px;
+}
+
+window#waybar.bottom button:hover {
+    box-shadow: inset 0 2px;
+}
+
+/*
+ * Common module rules
+ */
+
+.modules-left > widget > label,
+.modules-center > widget > label,
+.modules-right > widget > label {
+    color: inherit;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.modules-left > widget > box,
+.modules-center > widget > box,
+.modules-right > widget > box {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* If the leftmost module is a box, omit left margin and padding */
+.modules-left > widget:first-child > box {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* If the rightmost module is a box, omit right margin and padding */
+.modules-right > widget:last-child > box {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+
+/*
+ * Draw module underlines
+ */
+window#waybar:not(.bottom):not(.left):not(.right) .modules-left > widget > label,
+window#waybar:not(.bottom):not(.left):not(.right) .modules-center > widget > label,
+window#waybar:not(.bottom):not(.left):not(.right) .modules-right > widget > label {
+    box-shadow: inset 0 -2px;
+}
+
+window#waybar.bottom .modules-left > widget > label,
+window#waybar.bottom .modules-center > widget > label,
+window#waybar.bottom .modules-right > widget > label {
+    box-shadow: inset 0 2px;
+}
+
+window#waybar #window {
+    box-shadow: none;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: @crust;
+}
+
+#workspaces button.focused {
+    background-color: @blue;
+    color: @base;
+}
+
+window#waybar:not(.bottom):not(.left):not(.right) #workspaces button.focused {
+    box-shadow: inset 0 -2px;
+}
+
+window#waybar.bottom #workspaces button.focused {
+    box-shadow: inset 0 2px;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+#mode {
+    background-color: @surface0;
+}
+
+window#waybar:not(.bottom):not(.left):not(.right) #mode {
+    box-shadow: inset 0 -2px;
+}
+
+window#waybar.bottom #mode {
+    box-shadow: inset 0 2px;
+}
+
+#image {
+    margin: 0;
+    padding: 0 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @crust;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+    color: @inactive_module_color;
+}
+
+#tray {
+    padding: 0 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+@keyframes needs-attention {
+    to {
+        background-color: rgba(235, 77, 75, 0.5);
+    }
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    animation-name: needs-attention;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: transparent;
+}
+
+#idle_inhibitor {
+    color: @inactive_module_color;
+}
+
+#idle_inhibitor.activated {
+    color: inherit;
+}
+
+#mpd.disconnected,
+#mpd.paused,
+#mpd.stopped {
+    color: @inactive_module_color;
+}
+
+#cpu.high,
+#temperature.critical {
+    color: @red;
+}
+
+#language {
+    min-width: 16px;
+}
+
+#keyboard-state {
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+
+/*
+ * Module colors
+ */
+#cpu {
+    color: @teal;
+}
+
+#memory {
+    color: @lavender;
+}
+
+#disk {
+    color: @maroon;
+}
+
+#backlight {
+    color: @flamingo;
+}
+
+#network {
+    color: @sky;
+}
+
+#pulseaudio,
+#wireplumber {
+    color: @yellow;
+}
+
+#temperature {
+    color: @peach;
+}
+
+#mpd {
+    color: @rosewater;
+}
+
+#mpd.paused {
+    color: @yellow;
+}
+
+#language {
+    color: @green;
+}
+
+#keyboard-state {
+    color: @sapphire;
+}
