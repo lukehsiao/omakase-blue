@@ -1,0 +1,20 @@
+[global]
+corner_radius = 10
+corners = bottom, top-left
+frame_color = "#89b4fa"
+frame_width = 1
+separator_color= frame
+highlight = "#89b4fa"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
