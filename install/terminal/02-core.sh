@@ -30,11 +30,6 @@ distrobox-enter omakase-toolbox -- bash <<EOF
     curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
     cargo binstall -y --locked \
-        atuin \
-        b3sum \
-        bacon \
-        bat \
-        bottom \
         bunyan \
         cargo-audit \
         cargo-bloat \
@@ -44,68 +39,27 @@ distrobox-enter omakase-toolbox -- bash <<EOF
         cargo-nextest \
         cargo-semver-checks \
         cargo-update \
-        choose \
-        codebook-lsp \
-        difftastic \
         dircnt \
-        du-dust \
-        eza \
-        fd-find \
         ffsend \
         flamegraph \
-        git-absorb \
-        git-cliff \
-        git-delta \
-        git-grab \
         git-stats \
         gping \
-        hexyl \
-        hyperfine \
-        jaq \
-        jless \
-        just \
         leptosfmt \
-        lychee \
-        mise \
         numbat-cli \
-        oha \
-        onefetch \
         openring \
-        oxipng \
-        pastel \
         pgen \
-        presenterm \
         ren-find \
         rep-grep \
         rimage \
-        ripgrep \
-        samply \
-        sd \
         sqlx-cli \
-        sshx \
         star-history \
-        starship \
-        svgcleaner \
-        tailspin \
         talk-timer \
-        tealdeer \
         titlecase \
-        tokei \
         toml-fmt \
-        trippy \
         typeracer \
-        typos-cli \
-        typst-cli \
-        wasm-bindgen-cli \
-        watchexec-cli \
-        xh \
-        xsv \
-        zellij \
-        zoxide
+        wasm-bindgen-cli
 
     cargo install --git https://github.com/lukehsiao/tool.git --locked
-    cargo install --git https://github.com/Myriad-Dreamin/tinymist --locked tinymist
-    cargo install --git https://github.com/tectonic-typesetting/tectonic.git --locked tectonic
 
     # Install tooling for leptos
     rustup target add wasm32-unknown-unknown
