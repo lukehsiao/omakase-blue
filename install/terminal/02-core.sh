@@ -1,7 +1,7 @@
 # Installs all terminal apps that are meant to be shared between host and
 # container. Install from inside the devcontainer, because that has the
 # libraries needed to compile.
-distrobox-enter omakase-toolbox -- bash <<EOF
+distrobox-enter bx -- bash <<EOF
     # Install Rust
     if ! command -v rustup >/dev/null; then
         # Install rustup and Rust stable
