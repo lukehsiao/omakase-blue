@@ -45,7 +45,6 @@ distrobox-enter bx -- bash <<EOF
         git-stats \
         gping \
         leptosfmt \
-        numbat-cli \
         openring \
         pgen \
         ren-find \
