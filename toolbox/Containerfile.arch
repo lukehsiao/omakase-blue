@@ -1,6 +1,6 @@
 # Ref: https://github.com/ublue-os/toolboxes/blob/main/toolboxes/arch-toolbox/Containerfile.arch
 # 
-FROM quay.io/toolbx/arch-toolbox@sha256:f40c4285bb18d56faecab866cc3dba6f416f39105e5c20c308ecdc041eb6ffde AS arch-toolbox
+FROM quay.io/toolbx/arch-toolbox:latest AS arch-toolbox
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
