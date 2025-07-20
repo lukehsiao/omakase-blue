@@ -4,9 +4,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 name: Prune Old Images
-env:
-  # Exclude LFS files
-  GIT_LFS_SKIP_SMUDGE: 1
 
 jobs:
   prune:
@@ -18,4 +15,4 @@ jobs:
         with:
           package-name: 'omakase-toolbox'
           package-type: 'container'
-          min-versions-to-keep: 15
+          min-versions-to-keep: 10
