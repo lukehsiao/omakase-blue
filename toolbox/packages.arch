@@ -49,6 +49,7 @@ pandoc
 parallel
 pass
 pastel
+pinentry
 podman
 presenterm
 ripgrep
