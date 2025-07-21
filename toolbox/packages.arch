@@ -7,6 +7,7 @@ bat
 bc
 bottom
 btop
+ccid
 codebook-lsp
 coreutils
 curl
@@ -35,6 +36,7 @@ jaq
 jless
 just
 less
+libusb-compat
 lychee
 mat2
 mise
@@ -50,6 +52,7 @@ pandoc
 parallel
 pass
 pastel
+pcsclite
 pinentry
 podman
 presenterm
