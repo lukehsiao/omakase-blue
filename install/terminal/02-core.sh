@@ -43,7 +43,6 @@ distrobox-enter bx -- bash <<EOF
         ffsend \
         flamegraph \
         git-stats \
-        gping \
         leptosfmt \
         openring \
         pgen \

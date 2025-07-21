@@ -28,6 +28,7 @@ git-delta
 git-filter-repo
 git-grab
 git-lfs
+gping
 helix
 hexyl
 htop
