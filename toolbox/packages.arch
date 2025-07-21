@@ -10,6 +10,7 @@ btop
 ccid
 codebook-lsp
 coreutils
+croc
 curl
 difftastic
 dust
@@ -38,6 +39,7 @@ just
 less
 libusb-compat
 lychee
+magic-wormhole
 mat2
 mise
 mold
