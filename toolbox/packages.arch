@@ -4,6 +4,7 @@ atuin
 b3sum
 bacon
 base-devel
+bash-language-server
 bat
 bc
 bottom
@@ -51,6 +52,7 @@ less
 libusb-compat
 lychee
 magic-wormhole
+marksman
 mat2
 mise
 mold
@@ -75,6 +77,7 @@ samply
 sccache
 sd
 shellcheck
+shfmt
 slurp
 speedtest-cli
 sqlite
@@ -84,6 +87,7 @@ starship
 strace
 svgcleaner
 tailspin
+taplo-cli
 tcpdump
 tealdeer
 tectonic
@@ -93,6 +97,7 @@ trippy
 typos
 typos-lsp
 typst
+typstyle
 units
 unzip
 valgrind
@@ -104,6 +109,7 @@ wl-clipboard
 xh
 xsv
 xz
+yaml-language-server
 yt-dlp
 yubikey-manager
 zathura
