@@ -73,6 +73,7 @@ pcsclite
 podman
 postgresql
 presenterm
+prettier
 ripgrep
 samply
 sccache
