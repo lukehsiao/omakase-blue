@@ -70,6 +70,8 @@ parallel
 pass
 pastel
 pcsclite
+pipewire
+pipewire-audio
 podman
 postgresql
 presenterm
