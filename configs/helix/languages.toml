@@ -44,14 +44,15 @@ name = "git-commit"
 language-servers = [ "ltex-ls", "typos", "codebook" ]
 formatter = { command = "sed", args = ["s/[ \t]*$//"] }
 auto-format = true
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "scss"
-indent = { tab-width = 2, unit = " " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "just"
-indent = { tab-width = 4, unit = " " }
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "rust"
