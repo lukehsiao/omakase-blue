@@ -6,6 +6,8 @@ set -gx EDITOR hx
 set -gx COLORTERM 24bit
 set -gx GRAB_HOME ~/repos
 set -gx OMAKASEBLUE_PATH "/home/$USER/.local/share/omakase-blue"
+set -gx ZSTD_CLEVEL 19
+set -gx ZSTD_NBTHREADS (math (nproc)/2)
 
 # clear fish greeting
 set -g fish_greeting
