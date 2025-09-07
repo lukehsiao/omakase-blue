@@ -13,6 +13,10 @@
 </div>
 <br>
 
+> [!WARNING]
+> I have [switched to Omarchy](https://luke.hsiao.dev/blog/omakase-blue/#update), and no longer intend to update this repository.
+> Relevant dotfiles and setup have been moved to <https://github.com/lukehsiao/dotfiles>.
+
 Turn a fresh [Wayblue Sway](https://github.com/wayblueorg/wayblue) installation into my version of a fully-configured development system by running a single command.
 `omakase-blue` is an opinionated take on an already opinionated Linux workstation.
 Inspired by [Omakub](https://omakub.org/).
